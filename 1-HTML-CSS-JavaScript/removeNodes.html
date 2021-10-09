@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Removing Nodes Demo</title>
+    <style>
+      body {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="myList">
+      <li>Chicago Bulls</li>
+      <li>Portland trail Blazers</li>
+      <li>Maimi Heats</li>
+      <li>Pheonix Suns</li>
+    </ul>
+    <button type="button" onclick="removeListFirstChild()">
+      Remove List First Child with removeChild()
+    </button>
+    <button type="button" onclick="removeAllListChildren()">
+      Remove all list children with removeChild()
+    </button>
+    <button type="button" onclick="removeList()">
+      remove entire list with remove()
+    </button>
+    <button type="button" onclick="resetClick()" value="Reset">
+      Reset the page by creating the list
+    </button>
+    <p>Reload the page to reset the DOM and bring the list back</p>
+
+    <script>
+      const listNode = document.querySelector("#myList");
+      function removeListFirstChild() {
+        listNode.removeChild(listNode.firstElementChild);
+      }
+      function removeAllListChildren() {
+        while (listNode.firstChild) {
+          listNode.removeChild(listNode.firstChild);
+        }
+      }
+      function removeList() {
+        listNode.remove();
+      }
+      function resetClick() {
+        document.getElementById("myList").reset();
+      }
+    </script>
+  </body>
+</html>

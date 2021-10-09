@@ -1,0 +1,15 @@
+
+h1 {
+    text-align: center;
+   }
+    .survey-form {
+        width: 88%;
+        margin:auto;
+        }
+
+#submit_btn{
+    background: blue; 
+    color: white;
+    }            
+
+       
